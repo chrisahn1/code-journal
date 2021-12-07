@@ -6,3 +6,17 @@ var data = {
   editing: null,
   nextEntryId: 1
 };
+
+var previousDataJSON = localStorage.getItem('code-journal');
+
+if (previousDataJSON !== null) {
+  data = JSON.parse(previousDataJSON);
+}
+
+window.addEventListener('beforeunload', beforeLoad);
+
+function beforeLoad(event) {
+  var dataJSON = JSON.stringify(data);
+
+  localStorage.setItem('code-journal', dataJSON);
+}
