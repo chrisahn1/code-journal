@@ -26,7 +26,7 @@ function submitValues(event) {
 
   data.nextEntryId += 1;
 
-  data.entries.push(obj);
+  data.entries.unshift(obj);
 
   pic.src = 'images/placeholder-image-square.jpg';
   document.querySelector('#entry-form').reset();
