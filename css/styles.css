@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+  color: rgb(19 19 19);
+  font-weight: 300;
+  font-family: sans-serif;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+form {
+  margin: 3rem auto;
+  padding: 1rem 2rem 2rem;
+  max-width: 1500px;
+}
+
+label,
+input,
+textarea {
+  display: block;
+  width: 100%;
+}
+
+form,
+button,
+input,
+textarea {
+  border-radius: 0.25rem;
+}
+
+label {
+  margin-bottom: 0.75rem;
+}
+
+input,
+textarea {
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgb(189 189 189);
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 1px solid rgb(150 66 233);
+  box-shadow: 0 0 1px 1px rgb(150 66 233 / 60%);
+}
+
+::placeholder {
+  color: rgb(0 0 0 / 30%);
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  background-color: rgb(150 66 233);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+button:hover {
+  background-color: rgb(128 52 205);
+}
+
+button:focus {
+  outline: none;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+img {
+  width: 100%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+header {
+  background-color: purple;
+  color: white;
+  display: flex;
+  text-align: center;
+}
+
+.head {
+  margin-left: 30px;
+}
+
+@media screen and (min-width: 568px) {
+  .row {
+    display: flex;
+  }
+
+  img {
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 1429px) {
+  .head {
+    margin-left: 270px;
+  }
+
+  .row {
+    display: flex;
+  }
+
+  img {
+    width: 50%;
+  }
+
+  label {
+    width: 550px;
+  }
+
+  form {
+    margin-left: 240px;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
