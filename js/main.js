@@ -11,9 +11,9 @@ buttonEntry.addEventListener('click', viewClick);
 buttonNew.addEventListener('click', entryClick);
 
 function viewClick(event) {
+  window.location.reload(); // Refresh page
   enterElement.className = 'view hidden';
   viewElement.className = 'view';
-  window.location.reload(); // Refresh page
 }
 
 function entryClick(event) {
