@@ -13,6 +13,7 @@ buttonNew.addEventListener('click', entryClick);
 function viewClick(event) {
   enterElement.className = 'view hidden';
   viewElement.className = 'view';
+  window.location.reload(); // Refresh page
 }
 
 function entryClick(event) {
@@ -53,6 +54,7 @@ function submitValues(event) {
 
   enterElement.className = 'view hidden';
   viewElement.className = 'view';
+  window.location.reload(); // Refresh page
 }
 
 document.addEventListener('DOMContentLoaded', renderEntries);
