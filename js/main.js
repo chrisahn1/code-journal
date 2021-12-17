@@ -55,32 +55,31 @@ function submitValues(event) {
   viewElement.className = 'view';
 }
 
+document.addEventListener('DOMContentLoaded', renderEntries);
+
 // VIEW ENTRY
 function renderEntries() {
-  var ul = document.getElementById('list');
-  var li = document.createElement('li');
-  var row = document.createElement('div');
-  var img = document.createElement('img');
-  var info = document.createElement('div');
-  var title = document.createElement('h3');
-  var text = document.createElement('p');
 
-  row.className = 'row';
-  title.textContent = 'Marth';
-  text.textContent = 'Victory';
-  info.appendChild(title);
-  info.appendChild(text);
+  for (let i = 0; i < data.entries.length; i++) {
+    var ul = document.getElementById('list');
+    var li = document.createElement('li');
+    var row = document.createElement('div');
+    var img = document.createElement('img');
+    var info = document.createElement('div');
+    var title = document.createElement('h3');
+    var text = document.createElement('p');
 
-  img.className = 'photo';
-  img.src = 'https://ssb.wiki.gallery/images/thumb/e/e9/Marth_SSBU.png/1200px-Marth_SSBU.png';
-  row.appendChild(img);
-  row.appendChild(info);
-  li.appendChild(row);
-  ul.appendChild(li);
+    row.className = 'row';
+    title.textContent = data.entries[i].title;
+    text.textContent = data.entries[i].notes;
+    info.appendChild(title);
+    info.appendChild(text);
+
+    img.className = 'photo';
+    img.src = data.entries[i].photoUrl;
+    row.appendChild(img);
+    row.appendChild(info);
+    li.appendChild(row);
+    ul.appendChild(li);
+  }
 }
-
-renderEntries();
-
-// window.addEventListener('DOMContentLoaded', (event) => {
-//   console.log('DOM fully loaded and parsed');
-// });
