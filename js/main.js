@@ -10,6 +10,8 @@ var viewElement = document.getElementById('test2');
 buttonEntry.addEventListener('click', viewClick);
 buttonNew.addEventListener('click', entryClick);
 
+var emptyDefault = document.querySelector('.empty');
+
 function viewClick(event) {
   enterElement.className = 'view hidden';
   viewElement.className = 'view';
@@ -37,6 +39,7 @@ function addPhoto(event) {
 
 function submitValues(event) {
   event.preventDefault();
+  emptyDefault.className = 'empty hidden';
   var obj = {};
   obj.title = inputs[0].value;
   obj.photoUrl = inputs[1].value;
