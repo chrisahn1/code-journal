@@ -11,7 +11,6 @@ buttonEntry.addEventListener('click', viewClick);
 buttonNew.addEventListener('click', entryClick);
 
 function viewClick(event) {
-  window.location.reload(); // Refresh page
   enterElement.className = 'view hidden';
   viewElement.className = 'view';
 }
@@ -52,36 +51,45 @@ function submitValues(event) {
   pic.src = 'images/placeholder-image-square.jpg';
   document.querySelector('#entry-form').reset();
 
+  var ul = document.getElementById('list');
+  var entryResult = renderEntries(data.entries[0]);
+  ul.prepend(entryResult);
+
   enterElement.className = 'view hidden';
   viewElement.className = 'view';
-  window.location.reload(); // Refresh page
 }
-
-document.addEventListener('DOMContentLoaded', renderEntries);
 
 // VIEW ENTRY
-function renderEntries() {
+function renderEntries(entry) {
+  var li = document.createElement('li');
+  var row = document.createElement('div');
+  var img = document.createElement('img');
+  var info = document.createElement('div');
+  var title = document.createElement('h3');
+  var text = document.createElement('p');
 
+  row.setAttribute('class', 'row');
+  title.textContent = entry.title;
+  text.textContent = entry.notes;
+  info.appendChild(title);
+  info.appendChild(text);
+
+  img.setAttribute('class', 'photo');
+  img.setAttribute('src', entry.photoUrl);
+  row.appendChild(img);
+  row.appendChild(info);
+  li.appendChild(row);
+
+  return li;
+}
+
+function callEntries() {
+  var ul = document.getElementById('list');
+  var entryResult;
   for (let i = 0; i < data.entries.length; i++) {
-    var ul = document.getElementById('list');
-    var li = document.createElement('li');
-    var row = document.createElement('div');
-    var img = document.createElement('img');
-    var info = document.createElement('div');
-    var title = document.createElement('h3');
-    var text = document.createElement('p');
-
-    row.className = 'row';
-    title.textContent = data.entries[i].title;
-    text.textContent = data.entries[i].notes;
-    info.appendChild(title);
-    info.appendChild(text);
-
-    img.className = 'photo';
-    img.src = data.entries[i].photoUrl;
-    row.appendChild(img);
-    row.appendChild(info);
-    li.appendChild(row);
-    ul.appendChild(li);
+    entryResult = renderEntries(data.entries[i]);
+    ul.prepend(entryResult);
   }
 }
+
+document.addEventListener('DOMContentLoaded', callEntries);

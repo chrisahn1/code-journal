@@ -7,16 +7,16 @@ var data = {
   nextEntryId: 1
 };
 
-var previousDataJSON = localStorage.getItem('code-journal');
+// var previousDataJSON = localStorage.getItem('code-journal');
 
-if (previousDataJSON !== null) {
-  data = JSON.parse(previousDataJSON);
-}
+// if (previousDataJSON !== null) {
+//   data = JSON.parse(previousDataJSON);
+// }
 
-window.addEventListener('beforeunload', beforeLoad);
+// window.addEventListener('beforeunload', beforeLoad);
 
-function beforeLoad(event) {
-  var dataJSON = JSON.stringify(data);
+// function beforeLoad(event) {
+//   var dataJSON = JSON.stringify(data);
 
-  localStorage.setItem('code-journal', dataJSON);
-}
+//   localStorage.setItem('code-journal', dataJSON);
+// }
