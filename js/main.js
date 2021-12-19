@@ -12,6 +12,16 @@ buttonNew.addEventListener('click', entryClick);
 
 var emptyDefault = document.querySelector('.empty');
 
+function emptyEntriesCheck() {
+  if (data.entries.length === 0) {
+    emptyDefault.className = 'empty';
+  } else {
+    emptyDefault.className = 'empty hidden';
+  }
+}
+
+emptyEntriesCheck();
+
 function viewClick(event) {
   enterElement.className = 'view hidden';
   viewElement.className = 'view';
@@ -39,7 +49,6 @@ function addPhoto(event) {
 
 function submitValues(event) {
   event.preventDefault();
-  emptyDefault.className = 'empty hidden';
   var obj = {};
   obj.title = inputs[0].value;
   obj.photoUrl = inputs[1].value;
@@ -57,6 +66,8 @@ function submitValues(event) {
   var ul = document.getElementById('list');
   var entryResult = renderEntries(data.entries[0]);
   ul.prepend(entryResult);
+
+  emptyEntriesCheck();
 
   enterElement.className = 'view hidden';
   viewElement.className = 'view';
@@ -91,8 +102,9 @@ function callEntries() {
   var entryResult;
   for (let i = 0; i < data.entries.length; i++) {
     entryResult = renderEntries(data.entries[i]);
-    ul.prepend(entryResult);
+    ul.appendChild(entryResult);
   }
 }
 
-document.addEventListener('DOMContentLoaded', callEntries);
+callEntries();
+// document.addEventListener('DOMContentLoaded', callEntries);
