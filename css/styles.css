@@ -20,7 +20,7 @@ h2 {
 form {
   margin: 3rem auto;
   padding: 1rem 2rem 2rem;
-  max-width: 1200px;
+  max-width: 1500px;
 }
 
 label,
@@ -102,6 +102,43 @@ header {
   margin-left: 30px;
 }
 
+@media screen and (min-width: 320px) {
+  .new {
+    margin-left: 70px;
+    margin-bottom: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 20px;
+    /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
+    padding-right: 20px;
+  }
+
+  h3,
+  p {
+    font-size: 13px;
+  }
+
+  p {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    max-height: 500px;
+  }
+
+  form {
+    margin-right: 50px;
+  }
+
+  img {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 568px) {
+  .row {
+    display: flex;
+    margin-bottom: 10px;
+=======
 @media screen and (min-width: 568px) {
   .row {
     display: flex;
@@ -109,8 +146,29 @@ header {
 
   img {
     width: 45%;
+
+    margin-top: 10px;
+  }
+
+  .new {
+    margin-left: 300px;
+  }
+
+  form {
+    margin-right: 1px;
+  }
+
+  p {
+    display: block;
+    width: 10%;
   }
 }
+
+/* 1429 */
+=======
+  }
+}
+
 
 @media screen and (min-width: 1429px) {
   .head {
@@ -119,13 +177,78 @@ header {
 
   .row {
     display: flex;
+
+
+    /* View Entry */
+
+    margin-bottom: 40px;
+  }
+
+  /* View Entry */
+  .photo {
+    margin-right: 40px;
+=======
   }
 
   img {
     width: 50%;
+
   }
 
   label {
     width: 550px;
   }
+
+
+  form {
+    margin-left: 240px;
+  }
+
+  .new {
+    margin-left: 900px;
+  }
+
+  h3,
+  p {
+    font-size: 18px;
+  }
+}
+
+/* View Entry */
+ul {
+  list-style-type: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.view-head {
+  display: flex;
+}
+
+.new {
+  /* justify-content: flex-end; */
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 30px;
+  /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
+  padding-right: 30px;
+}
+
+p {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+}
+
+.view-button {
+  text-transform: none;
+  background-color: purple;
+}
+
+.view-button:hover {
+  background-color: purple;
+=======
+
 }
