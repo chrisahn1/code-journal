@@ -1,5 +1,6 @@
 /* global data */
 /* exported data */
+
 // SWITCHING PAGES
 var buttonEntry = document.querySelector('.view-button');
 var buttonNew = document.querySelector('.new');
@@ -107,4 +108,4 @@ function callEntries() {
 }
 
 callEntries();
-// document.addEventListener('DOMContentLoaded', callEntries);
+

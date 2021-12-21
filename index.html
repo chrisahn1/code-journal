@@ -17,10 +17,15 @@
 <body>
   <header>
     <h2 class="head">Code Journal</h2>
+
     <button class="view-button" type="button">Entries</button>
   </header>
   <main>
     <div class="view hidden" id="test1" data-view="entry-form">
+  </header>
+  <main>
+    <div data-view="entry-form" >
+
       <form id="entry-form">
         <h2>New Entry</h2>
         <div class="row">
@@ -33,6 +38,7 @@
           </div>
         </div>
         <label for="notes">Notes</label>
+
         <textarea required rows="5" name="notes" id="notes"></textarea>
         <div class="form-actions">
           <button id="save" type="submit">Save</button>
@@ -54,6 +60,12 @@
 
       </form>
 
+    </div>
+        <textarea required rows="5" name="notes" id="notes" ></textarea>
+        <div class="form-actions">
+          <button type="submit">Save</button>
+        </div>
+      </form>
     </div>
   </main>
   <script src="js/data.js"></script>

@@ -20,14 +20,7 @@ h2 {
 form {
   margin: 3rem auto;
   padding: 1rem 2rem 2rem;
-
-  /* View Entry */
-
   max-width: 1500px;
-
-  /* Create Entry */
-
-  /* max-width: 1200px; */
 }
 
 label,
@@ -145,10 +138,15 @@ header {
   .row {
     display: flex;
     margin-bottom: 10px;
+=======
+@media screen and (min-width: 568px) {
+  .row {
+    display: flex;
   }
 
   img {
     width: 45%;
+
     margin-top: 10px;
   }
 
@@ -167,6 +165,11 @@ header {
 }
 
 /* 1429 */
+=======
+  }
+}
+
+
 @media screen and (min-width: 1429px) {
   .head {
     margin-left: 270px;
@@ -174,6 +177,7 @@ header {
 
   .row {
     display: flex;
+
 
     /* View Entry */
 
@@ -183,11 +187,18 @@ header {
   /* View Entry */
   .photo {
     margin-right: 40px;
+=======
+  }
+
+  img {
+    width: 50%;
+
   }
 
   label {
     width: 550px;
   }
+
 
   form {
     margin-left: 240px;
@@ -238,4 +249,6 @@ p {
 
 .view-button:hover {
   background-color: purple;
+=======
+
 }
