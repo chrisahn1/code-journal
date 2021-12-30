@@ -89,7 +89,11 @@ button:focus {
 
 .form-actions {
   display: flex;
+
+  justify-content: space-between;
+
   justify-content: flex-end;
+
 }
 
 img {
@@ -139,6 +143,37 @@ header {
   img {
     margin-top: 10px;
   }
+
+
+  .box.appear {
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 4px;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    box-shadow: 0 0 0 1000px rgb(0 0 0 / 50%);
+  }
+
+  .cancel {
+    background-color: gray;
+    color: black;
+    margin-right: 20px;
+    font-size: 10px;
+  }
+
+  .confirm {
+    background-color: red;
+    color: white;
+    margin-left: 15px;
+    font-size: 10px;
+  }
+
 }
 
 @media screen and (min-width: 568px) {
@@ -164,6 +199,37 @@ header {
     display: block;
     width: 10%;
   }
+
+
+  .box.appear {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 4px;
+    position: absolute;
+    left: 40px;
+    bottom: 10px;
+    box-shadow: 0 0 0 1000px rgb(0 0 0 / 50%);
+  }
+
+  .cancel {
+    background-color: gray;
+    color: black;
+    margin-right: 20px;
+    font-size: 12px;
+  }
+
+  .confirm {
+    background-color: red;
+    color: white;
+    margin-left: 15px;
+    font-size: 12px;
+  }
+
 }
 
 /* 1429 */
@@ -201,6 +267,37 @@ header {
   p {
     font-size: 18px;
   }
+
+
+  .box.appear {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 700px;
+    padding: 70px;
+    background-color: white;
+    border-radius: 4px;
+    position: absolute;
+    left: 500px;
+    bottom: 350px;
+    box-shadow: 0 0 0 1000px rgb(0 0 0 / 50%);
+  }
+
+  .cancel {
+    background-color: gray;
+    color: black;
+    margin-right: 100px;
+    font-size: 18px;
+  }
+
+  .confirm {
+    background-color: red;
+    color: white;
+    margin-left: 80px;
+    font-size: 18px;
+  }
+
 }
 
 /* View Entry */
@@ -217,7 +314,7 @@ ul {
 }
 
 .new {
-  /* justify-content: flex-end; */
+
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 30px;
@@ -264,3 +361,31 @@ i:hover {
   display: flex;
   justify-content: end;
 }
+
+
+.box.gone {
+  display: none;
+}
+
+.choices {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete {
+  background-color: white;
+  color: purple;
+}
+
+.delete:hover {
+  background-color: lightgray;
+}
+
+.cancel:hover {
+  background-color: lightgray;
+}
+
+.confirm:hover {
+  background-color: orangered;
+}
+

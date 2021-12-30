@@ -86,10 +86,15 @@ function renderEntries(entry) {
   var titleRow = document.createElement('div');
   var title = document.createElement('h3');
 
+
+  var arrow = document.createElement('div');
+  arrow.setAttribute('class', 'arrow');
+
   // TESTING
   var arrow = document.createElement('div');
   arrow.setAttribute('class', 'arrow');
   // TESTING
+
 
   var editIcon = document.createElement('i');
   var text = document.createElement('p');
@@ -100,6 +105,12 @@ function renderEntries(entry) {
   editIcon.setAttribute('id', entry.entryID);
   editIcon.setAttribute('aria-hidden', 'true');
 
+
+  arrow.appendChild(editIcon);
+
+  titleRow.setAttribute('class', 'titlerow');
+  titleRow.appendChild(title);
+
   // TESTING
   arrow.appendChild(editIcon);
   // TETSING
@@ -107,6 +118,7 @@ function renderEntries(entry) {
   titleRow.setAttribute('class', 'titlerow');
   titleRow.appendChild(title);
   // titleRow.appendChild(editIcon);
+
   titleRow.appendChild(arrow);
 
   text.textContent = entry.notes;
@@ -193,3 +205,67 @@ function editValues(event) {
   viewElement.className = 'view';
   editElement.className = 'view hidden';
 }
+
+
+// DELETE ENTRY
+var inputTitle = document.getElementById('title-edit');
+var inputPhoto = document.getElementById('photoUrl-edit');
+var inputText = document.getElementById('notes-edit');
+var editButton = document.getElementById('save-edit');
+var deletion = document.getElementById('delete');
+var box = document.querySelector('.box');
+
+deletion.addEventListener('click', entryDelete);
+
+function entryDelete(event) {
+  inputTitle.disabled = true;
+  inputPhoto.disabled = true;
+  inputText.disabled = true;
+  editButton.disabled = true;
+  deletion.disabled = true;
+  box.className = 'box appear';
+}
+
+var cancelButton = document.querySelector('.cancel');
+cancelButton.addEventListener('click', cancelBox);
+
+function cancelBox(event) {
+  inputTitle.disabled = false;
+  inputPhoto.disabled = false;
+  inputText.disabled = false;
+  editButton.disabled = false;
+  deletion.disabled = false;
+  box.className = 'box gone';
+}
+
+var confirmButton = document.querySelector('.confirm');
+confirmButton.addEventListener('click', confirmBox);
+
+function confirmBox(event) {
+  event.preventDefault();
+
+  inputTitle.disabled = false;
+  inputPhoto.disabled = false;
+  inputText.disabled = false;
+  editButton.disabled = false;
+  deletion.disabled = false;
+  box.className = 'box gone';
+
+  var index;
+  for (let i = 0; i < data.entries.length; i++) {
+    if (data.entries[i].entryID === editID) {
+      index = i;
+      break;
+    }
+  }
+  data.entries.splice(index, 1);
+  var el = document.querySelector('.level' + editID.toString());
+  el.remove();
+
+  emptyEntriesCheck();
+
+  enterElement.className = 'view hidden';
+  viewElement.className = 'view';
+  editElement.className = 'view hidden';
+}
+
