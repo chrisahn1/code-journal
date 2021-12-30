@@ -86,8 +86,15 @@ function renderEntries(entry) {
   var titleRow = document.createElement('div');
   var title = document.createElement('h3');
 
+
   var arrow = document.createElement('div');
   arrow.setAttribute('class', 'arrow');
+
+  // TESTING
+  var arrow = document.createElement('div');
+  arrow.setAttribute('class', 'arrow');
+  // TESTING
+
 
   var editIcon = document.createElement('i');
   var text = document.createElement('p');
@@ -98,10 +105,20 @@ function renderEntries(entry) {
   editIcon.setAttribute('id', entry.entryID);
   editIcon.setAttribute('aria-hidden', 'true');
 
+
   arrow.appendChild(editIcon);
 
   titleRow.setAttribute('class', 'titlerow');
   titleRow.appendChild(title);
+
+  // TESTING
+  arrow.appendChild(editIcon);
+  // TETSING
+
+  titleRow.setAttribute('class', 'titlerow');
+  titleRow.appendChild(title);
+  // titleRow.appendChild(editIcon);
+
   titleRow.appendChild(arrow);
 
   text.textContent = entry.notes;
@@ -189,6 +206,7 @@ function editValues(event) {
   editElement.className = 'view hidden';
 }
 
+
 // DELETE ENTRY
 var inputTitle = document.getElementById('title-edit');
 var inputPhoto = document.getElementById('photoUrl-edit');
@@ -250,3 +268,4 @@ function confirmBox(event) {
   viewElement.className = 'view';
   editElement.className = 'view hidden';
 }
+

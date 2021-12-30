@@ -89,7 +89,11 @@ button:focus {
 
 .form-actions {
   display: flex;
+
   justify-content: space-between;
+
+  justify-content: flex-end;
+
 }
 
 img {
@@ -140,6 +144,7 @@ header {
     margin-top: 10px;
   }
 
+
   .box.appear {
     font-size: 10px;
     display: flex;
@@ -168,6 +173,7 @@ header {
     margin-left: 15px;
     font-size: 10px;
   }
+
 }
 
 @media screen and (min-width: 568px) {
@@ -193,6 +199,7 @@ header {
     display: block;
     width: 10%;
   }
+
 
   .box.appear {
     font-size: 12px;
@@ -222,6 +229,7 @@ header {
     margin-left: 15px;
     font-size: 12px;
   }
+
 }
 
 /* 1429 */
@@ -260,6 +268,7 @@ header {
     font-size: 18px;
   }
 
+
   .box.appear {
     font-size: 18px;
     display: flex;
@@ -288,6 +297,7 @@ header {
     margin-left: 80px;
     font-size: 18px;
   }
+
 }
 
 /* View Entry */
@@ -304,6 +314,7 @@ ul {
 }
 
 .new {
+
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 30px;
@@ -351,6 +362,7 @@ i:hover {
   justify-content: end;
 }
 
+
 .box.gone {
   display: none;
 }
@@ -376,3 +388,4 @@ i:hover {
 .confirm:hover {
   background-color: orangered;
 }
+
