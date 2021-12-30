@@ -1,0 +1,266 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+  color: rgb(19 19 19);
+  font-weight: 300;
+  font-family: sans-serif;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+form {
+  margin: 3rem auto;
+  padding: 1rem 2rem 2rem;
+
+  /* View Entry */
+
+  max-width: 1500px;
+
+  /* Create Entry */
+
+  /* max-width: 1200px; */
+}
+
+label,
+input,
+textarea {
+  display: block;
+  width: 100%;
+}
+
+form,
+button,
+input,
+textarea {
+  border-radius: 0.25rem;
+}
+
+label {
+  margin-bottom: 0.75rem;
+}
+
+input,
+textarea {
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgb(189 189 189);
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 1px solid rgb(150 66 233);
+  box-shadow: 0 0 1px 1px rgb(150 66 233 / 60%);
+}
+
+::placeholder {
+  color: rgb(0 0 0 / 30%);
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  background-color: rgb(150 66 233);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+button:hover {
+  background-color: rgb(128 52 205);
+}
+
+button:focus {
+  outline: none;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+img {
+  width: 100%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+header {
+  background-color: purple;
+  color: white;
+  display: flex;
+  text-align: center;
+}
+
+.head {
+  margin-left: 30px;
+}
+
+@media screen and (min-width: 320px) {
+  .new {
+    margin-left: 70px;
+    margin-bottom: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 20px;
+    /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
+    padding-right: 20px;
+  }
+
+  h3,
+  p {
+    font-size: 13px;
+  }
+
+  p {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    max-height: 500px;
+  }
+
+  form {
+    margin-right: 50px;
+  }
+
+  img {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 568px) {
+  .row {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  img {
+    width: 45%;
+    margin-top: 10px;
+  }
+
+  .new {
+    margin-left: 300px;
+  }
+
+  form {
+    margin-right: 1px;
+  }
+
+  p {
+    display: block;
+    width: 10%;
+  }
+}
+
+/* 1429 */
+@media screen and (min-width: 1429px) {
+  .head {
+    margin-left: 270px;
+  }
+
+  .row {
+    display: flex;
+
+    /* View Entry */
+
+    margin-bottom: 40px;
+  }
+
+  /* View Entry */
+  .photo {
+    margin-right: 40px;
+  }
+
+  label {
+    width: 550px;
+  }
+
+  form {
+    margin-left: 240px;
+  }
+
+  .new {
+    margin-left: 900px;
+  }
+
+  h3,
+  p {
+    font-size: 18px;
+  }
+}
+
+/* View Entry */
+ul {
+  list-style-type: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.view-head {
+  display: flex;
+}
+
+.new {
+  /* justify-content: flex-end; */
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 30px;
+  /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
+  padding-right: 30px;
+}
+
+p {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+}
+
+.view-button {
+  text-transform: none;
+  background-color: purple;
+}
+
+.view-button:hover {
+  background-color: purple;
+}
+
+i {
+  background-color: white;
+  color: black;
+  padding: 1px;
+  padding-top: 16px;
+  display: flex;
+  justify-content: end;
+  flex: auto;
+}
+
+i:hover {
+  color: gray;
+}
+
+.titlerow {
+  display: flex;
+  max-width: 800px;
+  justify-content: space-between;
+}
+
+.arrow {
+  display: flex;
+  justify-content: end;
+}
